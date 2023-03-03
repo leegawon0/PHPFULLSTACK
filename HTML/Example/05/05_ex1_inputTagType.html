@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>고객 정보</legend>
+
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id" required autofocus placeholder="10자까지 입력해주세요.">
+
+            <br>
+            <label for="pw">패스워드</label>
+            <input type="password" name="pw" id="pw">
+
+            <br>
+            <label for="readonly">readonly</label>
+            <input type="text" readonly value="참조">
+
+            <br>
+            <ul>
+                <li>
+                    <label for="strawberry">딸기</label>
+                    <input value="1" type="checkbox" name="strawberry" id="strawberry">
+                </li>
+                <li>
+                    <label for="banana">바나나</label>
+                    <input checked value="2" type="checkbox" name="banana" id="banana">
+                </li>
+                <li>
+                    <label for="watermelon">수박</label>
+                    <input value="3" type="checkbox" name="watermelon" id="watermelon">
+                </li>
+            </ul>
+
+            <br>
+            <ul>
+                <li>
+                    <label for="strawberry1">딸기</label>
+                    <input type="radio" name="fruit" id="strawberry1">
+                </li>
+                <li>
+                    <label for="banana1">바나나</label>
+                    <input type="radio" name="fruit" id="banana1">
+                </li>
+                <li>
+                    <label for="watermelon1">수박</label>
+                    <input checked type="radio" name="fruit" id="watermelon1">
+                </li>
+            </ul>
+            
+            <br>
+            <button>버튼</button>
+        </fieldset>
+    </form>
+</body>
+</html>
