@@ -1,0 +1,51 @@
+h2 {
+    color:#ff0000;
+    font-size: 1.5em;
+    text-align:center;
+}
+.body2 {
+    text-align: center;
+    font-weight: 900;
+    border: 1px dotted #000000;
+}
+.accent {
+    color:#0000ff;
+}
+.small {
+    font-size: small;
+}
+.height {
+    line-height: 2em;
+    font-weight: 900;
+}
+.body, .body2 {
+    width: 500px;
+    border: 1px dotted #000000;
+    border-collapse: collapse;
+    text-align: center;
+}
+.check {
+    background-color: black;
+    width: 500px;
+}
+.check2 {
+    color:#ffffff;
+    text-align: left;
+}
+.header {
+    width: 500px;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding:20px;
+    position: absolute;
+    top: 319px;
+}
+h1 {
+    color:#ffffff
+}
+.orange {
+    color:#ffaf45
+}
+img {
+    width: 500px;
+    position: relative;
+}

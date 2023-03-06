@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(165, 42, 42);
+    display: inline-block;
+}
+h2 {
+    color: rgb(0, 0, 255);
+}
+ol {
+    color: rgb(0, 140, 0);
+}
+table, th, td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    padding: 10px;
+}
