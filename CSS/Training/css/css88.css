@@ -1,0 +1,56 @@
+.container0 {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container1 {
+    border: 1px dotted black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.container2 {
+    border: 1px dotted black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.container3 {
+    border: 1px dotted black;
+    border-left: 1px solid black;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+
+table {
+    width: 500px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #c1c3cc;
+    padding: 10px;
+}
+
+.th_bc {
+    width: 90px;
+    background-color: #e8e9ee;
+    text-align: center;
+}
+
+ul {
+    list-style-type: decimal;
+}
+
+.accent {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
