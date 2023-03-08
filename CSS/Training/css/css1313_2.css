@@ -1,0 +1,24 @@
+article {
+    width: 1150px;
+}
+
+p {
+    float: left;
+    width: 500px; height: 250px;
+    border: 1px dashed gray;
+    margin: 10px;
+    padding: 30px 20px;
+}
+
+footer {
+    clear: both;
+    background-color: black;
+    line-height: 50px;
+    color: yellow;
+    text-align: center;
+}
+
+span {
+    font-size: 20px;
+    font-weight: 900;
+}

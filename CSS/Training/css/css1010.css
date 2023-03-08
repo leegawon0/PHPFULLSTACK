@@ -30,6 +30,10 @@ article {
     border: 5px solid rgb(44, 0, 148);
     border-top: none;
     border-left: none;
+    text-align: center;
+    background-image: radial-gradient(#ffffff 20%, transparent 0), radial-gradient(#ffffff 20%, transparent 0);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
 }
 
 .right_side {
@@ -49,4 +53,12 @@ footer {
     clear: left;
     border: 5px solid rgb(44, 0, 148);
     border-top: none;
+}
+
+img {
+    width: 400px;
+}
+
+span {
+    float: left;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div_img {
+            width: 800px;
+            height: 800px;
+            background-image: url("./go.jpg"), url("check.png");
+        }
+        p {
+            width: 200px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid black;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 50%;
+            position: fixed;
+            top: 30px;
+            left: 50px;
+        }
+
+        .div_repeat {
+            border: 1px solid black;
+            background-image: url('go.jpg');
+            width: 1000px; height: 1000px;
+            background-repeat: repeat-y;
+        }
+
+        .div_position {
+            width: 1000px; height: 1000px;
+            border: 1px solid black;
+            background-image: url('go.jpg');
+            /* background-position: bottom 100px right 50px; */
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .at_img {
+            background-image: url('go.jpg');
+            background-attachment: scroll;
+            width: 150px; height: 200px;
+            display: inline-block;
+            border: 1px solid black;
+            overflow: scroll;
+            background-size: 80%;
+        }
+
+        .div_img_scroll {
+            background-attachment: scroll;
+        }
+
+        .div_img_fixed {
+            background-attachment: fixed;
+        }
+
+        .div_img_local {
+            background-attachment: local;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <h1>background-position</h1>
+    <div class="div_position"></div> -->
+
+    <!-- <div class="div_img"></div>
+    <p>안녕</p> -->
+
+    <!-- <h1>background-repeat</h1>
+    <div class="div_repeat"></div> -->
+    <div style="height: 200px;"></div>
+    <div class="div_img_scroll at_img">몸길이는 약 20 cm 안팎으로 대형종이다. 꼬리길이는 2.3-3.7cm이다. 체모가 변형되어서 생긴 가시가 몸에 돋혀 있으며, 전체적으로 억세며 가로줄 모양의 어두운 무늬가 있다. 귓바퀴가 짧고 주둥이가 돼지처럼 뾰족하며 발톱이 잘 발달했다. 귀·다리·꼬리가 짧고 몸집은 뭉툭하다. 평야지대의 삼림에서 주로 서식하고 야행성으로 낮에는 구멍이나 바위틈에 숨는다. 곤충·민달팽이·지렁이·뱀·과일·채소 등을 먹고 겨울잠을 잔다. 천적과 맞닥뜨리면 네다리를 배 부위에 모아 공처럼 몸을 둥글게 하여, 등에 난 가시털로 자신을 방어한다.</div>
+    <div class="div_img_fixed at_img">몸길이는 약 20 cm 안팎으로 대형종이다. 꼬리길이는 2.3-3.7cm이다. 체모가 변형되어서 생긴 가시가 몸에 돋혀 있으며, 전체적으로 억세며 가로줄 모양의 어두운 무늬가 있다. 귓바퀴가 짧고 주둥이가 돼지처럼 뾰족하며 발톱이 잘 발달했다. 귀·다리·꼬리가 짧고 몸집은 뭉툭하다. 평야지대의 삼림에서 주로 서식하고 야행성으로 낮에는 구멍이나 바위틈에 숨는다. 곤충·민달팽이·지렁이·뱀·과일·채소 등을 먹고 겨울잠을 잔다. 천적과 맞닥뜨리면 네다리를 배 부위에 모아 공처럼 몸을 둥글게 하여, 등에 난 가시털로 자신을 방어한다.</div>
+    <div class="div_img_local at_img">몸길이는 약 20 cm 안팎으로 대형종이다. 꼬리길이는 2.3-3.7cm이다. 체모가 변형되어서 생긴 가시가 몸에 돋혀 있으며, 전체적으로 억세며 가로줄 모양의 어두운 무늬가 있다. 귓바퀴가 짧고 주둥이가 돼지처럼 뾰족하며 발톱이 잘 발달했다. 귀·다리·꼬리가 짧고 몸집은 뭉툭하다. 평야지대의 삼림에서 주로 서식하고 야행성으로 낮에는 구멍이나 바위틈에 숨는다. 곤충·민달팽이·지렁이·뱀·과일·채소 등을 먹고 겨울잠을 잔다. 천적과 맞닥뜨리면 네다리를 배 부위에 모아 공처럼 몸을 둥글게 하여, 등에 난 가시털로 자신을 방어한다.</div>
+    <div style="height: 1000px;"></div>
+</body>
+</html>
