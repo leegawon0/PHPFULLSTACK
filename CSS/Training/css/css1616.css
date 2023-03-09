@@ -1,0 +1,42 @@
+nav {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    margin: 50px; padding: 0;
+    box-shadow: 0px 5px 5px gray;
+}
+
+li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    line-height: 30px;
+    background-color: rgb(221, 221, 221);
+    border-right: 1px solid gray;
+}
+
+li:hover {
+    background-color: #555;
+    color: #fff
+}
+
+.menu6 {
+    border-right: none;
+}
+
+.menu6:hover {
+    background-color: #b30000;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    width: 100px; height: 30px;
+    display: inline-block;
+}
+
+a:hover {
+    color: #fff;
+}

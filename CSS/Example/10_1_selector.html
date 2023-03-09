@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header span {
+            background-color: aqua;
+        }
+
+        header>span {
+            background-color: pink;
+        }
+
+        span + p {
+            background-color: yellow;
+        }
+
+        .div3 ~ span {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>header - div - span</span>
+        </div>
+        <span>header - span</span>
+    </header>
+    <span>span</span>
+    <br><br>
+    <main>
+        <div>
+            <span>header - div - span</span>
+        </div>
+        <span>header - span1</span>
+        <p>header - p</p>
+        <span>header - span2</span>
+        <span>header - span3</span>
+    </main>
+    <main>
+        <div class="div3">
+            <span>header - div - span</span>
+        </div>
+        <span>header - span1</span>
+        <span>header - span2</span>
+        <span>header - span3</span>
+    </main>
+</body>
+</html>

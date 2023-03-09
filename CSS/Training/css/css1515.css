@@ -1,0 +1,39 @@
+body {
+    background-color: #02233b;
+}
+
+.container {
+    background-color: white;
+    width: 600px; height: 700px;
+    margin: 0 auto;
+    background-image: url('../mic.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+h1 {
+    background-color: #004344;
+    color: white;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 580px;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+main {
+    margin: 10px;
+}
+
+h3 {
+    color: orangered;
+}
+
+li {
+    list-style: none;
+}

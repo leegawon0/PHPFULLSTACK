@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+        }
+        a:visited {
+            color: magenta;
+        }
+        li:hover {
+            background-color: rgb(126, 104, 204);
+            color: white;
+        }
+        ul{
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 100px; height: 50px;
+            background-color: rgb(208, 225, 255);
+            text-align: center;
+            line-height: 50px;
+        }
+        input:focus {
+            outline: none;
+            border: 3px solid red;
+        }
+        li:active {
+            background-color: orange;
+        }
+        #target_1:target {
+            background-color: rgb(214, 196, 255);
+        }
+        /* div :nth-child() {
+            background-color: yellow;
+        }
+        div p:nth-of-type(even) {
+            background-color: green;
+        }
+        div :not(p) {
+            background-color: pink;
+        } */
+        .container_2 .pf_1::first-letter {
+            background-color: rgb(188, 208, 245);
+        }
+        .container_2 .pf_2::first-line {
+            background-color: rgb(255, 223, 165);
+        }
+        .pf_1>span::before {
+            content: '짱';
+            color: red;
+        }
+        .pf_2>span::after {
+            content: '짱';
+            color: red;
+        }
+        .container_2 p::selection {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>가상 요소</legend>
+        <div class="container_2">
+            <h2>h2_1</h2>
+            <p class="pf_1">몸길이는 약 20 cm 안팎으로 <span>대형종</span>이다. 꼬리길이는 2.3-3.7cm이다. 체모가 변형되어서 생긴 가시가 몸에 돋혀 있으며, 전체적으로 억세며 가로줄 모양의 어두운 무늬가 있다. 귓바퀴가 짧고 주둥이가 돼지처럼 뾰족하며 발톱이 잘 발달했다. 귀·다리·꼬리가 짧고 몸집은 뭉툭하다. 평야지대의 삼림에서 주로 서식하고 야행성으로 낮에는 구멍이나 바위틈에 숨는다. 곤충·민달팽이·지렁이·뱀·과일·채소 등을 먹고 겨울잠을 잔다. 천적과 맞닥뜨리면 네다리를 배 부위에 모아 공처럼 몸을 둥글게 하여, 등에 난 가시털로 자신을 방어한다.</p>
+            <p class="pf_2">활엽수림과 혼효림에 많이 살며, <span>삼림 속의 녹초와 열매</span>는 물론 곤충이나 곤충의 유충, 거미, 뱀, 도마뱀, 장지뱀, 민달팽이 등도 두루 포식하여 생태계의 조절자 역할을 맡는다. 11월부터 동면 세태에 들어가고 가시갈이를 하며, 한 배에 3~7마리의 새끼를 낳으며, 임신 기간은 약 1개월이다. 러시아의 아무르 주, 프리모르스키 지방, 중국 만주, 한반도 등이 원산지이다. 애완동물로도 많이 기르며 고양이와 함께 공생하기도 한다.</p>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>구조 가상 클래스</legend>
+        <div class="container">
+            <h2>h2_1</h2>
+            <p>p_1</p>
+            <p>p_2</p>
+            <h2>h2_1</h2>
+            <p>p_3</p>
+        </div>
+    </fieldset>
+    <br>
+    <a href="http://naver.com/">네이버</a>
+    <nav>
+        <ul>
+            <li><a href="#target_1">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+    </nav>
+    <br><br><br>
+    <span id="target_1">target 테스트</span>
+    <br><br>
+    <label for="input_1">입력</label>
+    <input type="text" id="input_1">
+</body>
+</html>
