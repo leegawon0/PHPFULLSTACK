@@ -1,0 +1,5 @@
+@media (min-width: 701px) and (max-width: 900px) {
+    p {
+        background-color: rgb(255, 223, 163);
+    }
+}
