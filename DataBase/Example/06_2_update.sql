@@ -15,3 +15,11 @@ SELECT *
 FROM departments;
 
 COMMIT;
+
+UPDATE titles
+SET to_date = DATE(99990101)
+WHERE emp_no = 500000;
+
+UPDATE titles
+SET to_date = DATE(99990101)
+WHERE emp_no = 500000 AND to_date = DATE(20240228);
