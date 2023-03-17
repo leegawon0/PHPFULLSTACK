@@ -65,10 +65,8 @@ WHERE title = 'Staff'
 
 -- 8. 부서장직을 역임했던 모든 사원의 풀네임과 입사일, 사번, 부서번호를 출력해 주세요.
 
-SELECT CONCAT(e.first_name,' ',e.last_name) full_name, e.hire_date, e.emp_no, d_n.dept_no
-FROM departments d_n
-	INNER JOIN dept_manager d_m
-		ON d_n.dept_no = d_m.dept_no
+SELECT CONCAT(e.first_name,' ',e.last_name) full_name, e.hire_date, e.emp_no, d_m.dept_no
+FROM dept_manager d_m
 	INNER JOIN employees e
 		ON d_m.emp_no = e.emp_no;
 
@@ -187,3 +185,29 @@ WHERE e.gender = 'M'
 GROUP BY t.title;
 
 -- COUNT(distinct) 다음에 GROUP BY가 실행되었으면 하지만 SQL에서는 GROUP BY가 SELECT보다 먼저 실행되어 버리는 것 같다....
+
+SELECT title, COUNT(fired.emp_no)
+FROM ( SELECT title, emp_no
+		FROM titles
+		GROUP BY emp_no
+		HAVING MAX(to_date) != DATE(99990101) ) fired
+		INNER JOIN employees e
+			ON e.emp_no = fired.emp_no
+WHERE e.gender = 'M'
+GROUP BY title;
+
+-- (최종!!) 직급 별 퇴사한 남자 수
+
+SELECT title, COUNT(fired.emp_no)
+FROM ( SELECT title, emp_no
+		FROM titles
+		GROUP BY emp_no
+		HAVING MAX(to_date) != DATE(99990101) ) fired
+		INNER JOIN employees e
+			ON e.emp_no = fired.emp_no
+WHERE e.gender = 'F'
+GROUP BY title;
+
+-- (최종!!) 직급 별 퇴사한 여자 수
+
+-- 서브쿼리로 전체 집합을 제한해 준 다음 이너 조인으로 연결 후 그룹화
