@@ -211,3 +211,44 @@ GROUP BY title;
 -- (최종!!) 직급 별 퇴사한 여자 수
 
 -- 서브쿼리로 전체 집합을 제한해 준 다음 이너 조인으로 연결 후 그룹화
+
+-- employees 테이블과 dept_emp를 join해서
+-- 10001 회원의 사번, 이름, 소속부서번호를 출력해주세요.
+
+SELECT e.emp_no, e.first_name, d.dept_no
+FROM employees e
+	INNER JOIN dept_emp d
+	ON e.emp_no = d.emp_no
+WHERE e.emp_no = 10001;
+
+-- employees 테이블과 dept_emp, departments를 join해서
+-- 10001 회원의 사번, 이름, 소속부서번호, 부서명을 출력해주세요.
+
+SELECT e.emp_no, e.first_name, d.dept_no, dm.dept_name
+FROM employees e
+	INNER JOIN dept_emp d
+	ON e.emp_no = d.emp_no
+	INNER JOIN departments dm
+	ON d.dept_no = dm.dept_no
+WHERE e.emp_no = 10001;
+
+-- 사번이 300,000번 이상이고 급여가 50,000원 이하인 사람 중 상위 3위 안에 드는 사람
+-- 성과금 지급, 급여가 동일하면 그 사람도 받음
+
+SELECT e.emp_no, s.salary, RANK() over (ORDER BY salary DESC) ranking
+FROM employees e
+	INNER JOIN salaries s
+	ON e.emp_no = s.emp_no
+WHERE e.emp_no >= 300000
+AND s.salary <= 50000;
+
+-- 결과 ↓
+
+SELECT e.emp_no, r.salary, ranking
+FROM (SELECT emp_no, salary, RANK() over (ORDER BY salary DESC) ranking
+		FROM salaries
+		WHERE salary <= 50000) r
+		INNER JOIN employees e
+		ON r.emp_no = e.emp_no
+WHERE e.emp_no >= 300000
+AND ranking <= 3;
