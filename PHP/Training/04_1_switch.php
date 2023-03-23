@@ -1,6 +1,6 @@
 <?php
 
-$score = 120;
+$score = 1;
 switch ($score)
 {
     case $score < 0 || $score > 100:
@@ -10,22 +10,22 @@ switch ($score)
     switch ($score)
     {
         case 100:
-            $grade = 'A+';
+            $grade = "A+";
             break;
-        case 90:
-            $grade = 'A';
+        case $score >= 90:
+            $grade = "A";
             break;
         case $score >= 80:
-            $grade = 'B';
+            $grade = "B";
             break;
         case $score >= 70:
-            $grade = 'C';
+            $grade = "C";
             break;
         case $score >= 60:
-            $grade = 'D';
+            $grade = "D";
             break;
         default:
-            $grade = 'F';
+            $grade = "F";
             break;
     }
         echo "당신의 점수는 ".$score."점 입니다. <".$grade.">";
