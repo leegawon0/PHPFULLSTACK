@@ -28,4 +28,6 @@ $arr_food_del = array(
 unset($arr_food_del["라면"]);
 print_r ($arr_food_del);
 
+sfasdfsdf
+
 ?>
