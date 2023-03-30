@@ -4,42 +4,34 @@
 
 function fnc_star($n)
 {
-    $s = 1;
-    while ($s <= $n)
+    for($s=1; $s<=$n; $s++)
     {
         echo "*";
-        $s++;
     }
     echo "\n";
 }
 
 function fnc_star_static($n)
 {
-    $s = 1;
-    while ($s <= $n)
+    for($s=1; $s<=$n; $s++)
     {
         fnc_star($n);
-        $s++;
     }
 }
 
 function fnc_star_asc($n)
 {
-    $s = 1;
-    while ($s <= $n)
+    for($s=1; $s<=$n; $s++)
     {
         fnc_star($s);
-        $s++;
     }
 }
 
 function fnc_star_desc($n)
 {
-    $s = $n;
-    while ($s >= 1)
+    for($s=$n; $s>=1; $s--)
     {
         fnc_star($s);
-        $s--;
     }
 }
 
