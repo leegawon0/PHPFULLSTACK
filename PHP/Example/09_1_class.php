@@ -53,4 +53,27 @@ echo "\n";
 $obj_Student->set_std_id("갑순이id");
 echo $obj_Student->get_std_id();
 
+echo "\n";
+
+// 생성자(constructor)
+
+class Food
+{
+    private $food_name;
+    // 생성자
+    public function __construct( $param_food_name )
+    {
+        $this->food_name = $param_food_name;
+    }
+    public function print_food_name()
+    {
+        echo $this->food_name;
+    }
+}
+
+$obj_food = new Food( "탕수육" );
+$obj_food->print_food_name();
+
+// PHP 5.3.3 이후로 네임스페이스 클래스의 마지막 엘리먼트명을 더이상 생성자로 다루지 않습니다. 이 변경은 비네임스페이스 클래스들에게는 영향을 미치지 않습니다.
+
 ?>
