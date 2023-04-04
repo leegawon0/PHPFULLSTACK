@@ -2,28 +2,29 @@
 
 // 우리가 작성한 DB 커넥트 함수(my_db_conn)를 이용해서 아래 데이터를 출력해주세요.
 
-function my_db_conn( &$param_conn )
-{
-    $db_host        = "localhost";
-    $db_user        = "root";
-    $db_password    = "root506";
-    $db_name        = "employees";
-    $db_charset     = "utf8mb4";
-    $db_dns         = "mysql:host=".$db_host.";dbname=".$db_name.";charset=".$db_charset;
-    $db_option      = 
-        array(
-            PDO::ATTR_EMULATE_PREPARES      => false
-            ,PDO::ATTR_ERRMODE              => PDO::ERRMODE_EXCEPTION
-            ,PDO::ATTR_DEFAULT_FETCH_MODE   => PDO::FETCH_ASSOC
-        );
+// function my_db_conn( &$param_conn )
+// {
+//     $db_host        = "localhost";
+//     $db_user        = "root";
+//     $db_password    = "root506";
+//     $db_name        = "employees";
+//     $db_charset     = "utf8mb4";
+//     $db_dns         = "mysql:host=".$db_host.";dbname=".$db_name.";charset=".$db_charset;
+//     $db_option      = 
+//         array(
+//             PDO::ATTR_EMULATE_PREPARES      => false
+//             ,PDO::ATTR_ERRMODE              => PDO::ERRMODE_EXCEPTION
+//             ,PDO::ATTR_DEFAULT_FETCH_MODE   => PDO::FETCH_ASSOC
+//         );
     
-    //PDO Class로 DB 연동
-    $param_conn = new PDO( $db_dns, $db_user, $db_password, $db_option );
-}
+//     $param_conn = new PDO( $db_dns, $db_user, $db_password, $db_option );
+// }
 
-$obj_conn = null; // PDO Class
+include_once("../Example/12_2_fnc_db.php");
 
-my_db_conn( $obj_conn ); // DB Connect
+$obj_conn = null;
+
+my_db_conn( $obj_conn );
 
 // 1. 전체 월급의 평균
 
@@ -34,8 +35,13 @@ $sql =
     ." salaries "
     ;
 
-$stmt = $obj_conn->prepare( $sql );
-$stmt->execute();
+// ---------- prepare 메소드 이용하기 ----------
+// $stmt = $obj_conn->prepare( $sql );
+// $stmt->execute();
+// $result = $stmt->fetchAll();
+
+// ---------- query 메소드 이용하기 ----------
+$stmt = $obj_conn->query( $sql );
 $result = $stmt->fetchAll();
 
 echo "전체 월급의 평균 : ".$result[0]["avg_salary"];
@@ -63,12 +69,12 @@ echo "전체 월급의 평균 : ".$result[0]["avg_salary"];
 
 // $arr_prepare = 
 //     array(
-//         ":emp_no" => "500001"
-//         ,":birth_date" => "1998-04-03"
-//         ,":first_name" => "Gawon"
-//         ,":last_name" => "Lee"
-//         ,":gender" => 'F'
-//         ,":hire_date" => "2023-04-03"
+//         ":emp_no"        => "500001"         // array에는 "" 안에 공백 넣으면 안됨
+//         ,":birth_date"   => "1998-04-03"
+//         ,":first_name"   => "Gawon"
+//         ,":last_name"    => "Lee"
+//         ,":gender"       => 'F'
+//         ,":hire_date"    => "2023-04-03"
 //     );
 
 // $stmt = $obj_conn->prepare( $sql );
@@ -89,9 +95,9 @@ echo "전체 월급의 평균 : ".$result[0]["avg_salary"];
 
 // $arr_prepare = 
 //     array(
-//         ":first_name" => "길동"
-//         ,":last_name" => "홍"
-//         ,":emp_no" => 500001
+//         ":first_name"    => "길동"
+//         ,":last_name"    => "홍"
+//         ,":emp_no"       => 500001
 //     );
 
 // $stmt = $obj_conn->prepare( $sql );
