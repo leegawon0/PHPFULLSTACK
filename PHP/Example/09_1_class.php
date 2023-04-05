@@ -1,6 +1,6 @@
 <?php
 
-// CLASS : 비슷한  함수들이 모여있는 집합
+// CLASS : 비슷한 객체들이 모여있는 집합
 
 class Student
 {
