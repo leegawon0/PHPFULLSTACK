@@ -28,6 +28,7 @@
 
 // class 이용 권장!!
 
+// 터미널에서 입력값 받아올 수 있는 while문
 while(true) {
 	echo '시작';
 	print "\n";
