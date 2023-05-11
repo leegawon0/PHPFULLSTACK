@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div id="carouselExampleSlidesOnly3" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="height: 40px; object-fit: cover;" src="https://theninemall.com/web/upload/goodymall/kr/main/top_b_pc_join_01_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img style="height: 40px; object-fit: cover;" src="https://theninemall.com/web/upload/goodymall/kr/main/230424_timesale_pc_top_b_01.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a id="xBtn" href="#" style="position: absolute; top: 8px; right: 12px; text-decoration: none; color: white;">X</a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="header" style="width: 100%; margin-bottom: 20px; margin-top: 20px; display: grid; justify-content: center; align-items: center;">
+        <img src="https://theninemall.com/web/logo_02.png" alt="헤더">
+    </div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    BEST
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    TIME SALE
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    PHONE CASE
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    FASHION
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin-top: 25px;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://theninemall.com/web/upload/goodymall/kr/main/230414_p_ma_b_01_gif.gif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://theninemall.com/web/upload/goodymall/kr/main/p_ma_b_02_gif_s_size.gif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://theninemall.com/web/upload/goodymall/kr/main/p_ma_b_01_gif_s_size.gif" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container-fluid" style="padding-left: 6vw; padding-right: 6vw; max-width: 1320px; display: grid; align-content: center; margin-top: 100px;">
+        <div class="info" style="display: grid; align-content: end;">
+            <span>BEST DESIGN 한주간 사랑받은 베스트 디자인</span>
+        </div>
+        <div class="row row-cols-3" style="justify-content: center;">
+            <div class="col" style="padding: 10px;">
+                <img src="https://theninemall.com/web/product/medium/202304/981abfb9fc4740668f023551a1f6a071.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col" style="padding: 10px;">
+                <img src="https://theninemall.com/web/product/medium/202302/87f6ba09228eddfb7cc95c4c7265eac7.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col" style="padding: 10px;">
+                <img src="https://theninemall.com/web/product/medium/202304/74b25a261fc81b0cb58126544c30c7eb.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col" style="padding: 10px;">
+                <img src="https://theninemall.com/web/product/medium/202302/86b5d542dbd5b748f36da5bb575bed46.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col" style="padding: 10px;">
+                <img src="https://theninemall.com/web/product/medium/202204/0f8f02375d54c062913640c01172540c.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col" style="padding: 10px;">
+                <img src="https://theninemall.com/web/product/medium/202202/944ba4e970029e6544f5647754e978fc.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-left: 6vw; padding-right: 6vw; max-width: 1320px; display: grid; align-content: center; margin-top: 100px;">
+        <div class="row row-cols-2">
+            <div class="col">
+                <div class="video" style="height: 100%">
+                    <iframe width="100%" height="100%" src="//www.youtube.com/embed/zmsLu-HAjx0?ecver=2&amp;autoplay=1&amp;playlist=zmsLu-HAjx0&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;rel=0&amp;autohide=1&amp;mute=1" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://theninemall.com/web/upload/goodymall/kr/main/ma_slide_mini_b_01.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://theninemall.com/web/upload/goodymall/kr/main/ma_slide_mini_b_02.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://theninemall.com/web/upload/goodymall/kr/main/ma_slide_mini_b_03.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleControls4" class="container-fluid carousel slide" data-bs-ride="carousel" style="padding-left: 6vw; padding-right: 6vw; max-width: 1320px; display: grid; align-content: center; margin-top: 100px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="imglist" style="display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 20px;">
+                    <img src="https://theninemall.com/web/product/medium/202304/13afc8c5c7d203f76a44dd9c7a650d43.jpg" class="d-block w-100" alt="...">
+                    <img src="https://theninemall.com/web/product/medium/202304/84c7ac04857df0467d79f832c59ff261.jpg" class="d-block w-100" alt="...">
+                    <img src="https://theninemall.com/web/product/medium/202304/49d80f803b8c792f13b1891080e434f0.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="imglist" style="display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 20px;">
+                    <img src="https://theninemall.com/web/product/medium/202303/0c3d15af2d7ff2c0514e5a4b61254ce5.jpg" class="d-block w-100" alt="...">
+                    <img src="https://theninemall.com/web/product/medium/202303/895ddd60fd3d20aec7004221aa674b25.jpg" class="d-block w-100" alt="...">
+                    <img src="https://theninemall.com/web/product/medium/202302/74949ff9b17e1aea7686e1bdbb0f0c88.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="imglist" style="display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 20px;">
+                    <img src="https://theninemall.com/web/product/medium/202303/c1f87963b1671502c66c57146697bd2f.gif" class="d-block w-100" alt="...">
+                    <img src="https://theninemall.com/web/product/medium/202303/2626db59689125f3faa3ed75cdffdab7.gif" class="d-block w-100" alt="...">
+                    <img src="https://theninemall.com/web/product/medium/202303/97f21f313295d57e30f743a05ba1f929.gif" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="mall.js"></script>
+</body>
+</html>

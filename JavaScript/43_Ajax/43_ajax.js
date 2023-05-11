@@ -12,14 +12,20 @@ function runApi() {
     fetch(inputUrl)
     .then(res => {return res.json()})
     .then(data => makeList(data))
-    .catch(console.log);
+    .catch(err => {
+        if(err) {
+            alert('유효한 주소를 입력하세요');
+            return console.log(err);
+        }
+    });
+    // .catch(console.log);
 }
 
 function makeList(data) {
     imgSection.replaceChildren();
     data.forEach(item => {
         const tagImg = document.createElement('img');
-        tagImg.setAttribute('src', item.download_url)
+        tagImg.setAttribute('src', item.download_url);
         imgSection.appendChild(tagImg);
     });
 }
