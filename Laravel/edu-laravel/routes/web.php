@@ -51,7 +51,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-
 /*
 |--------------------------------------------------------------------------
 | HTTP 메소드에 대응하는 라우터
@@ -244,6 +243,7 @@ Route::middleware('auth')->prefix('users')->group(function () {
 | 
 |
 */
+
 use Illuminate\Support\Facades\URL;
 Route::get('/makesign', function() {
     // 일반 URL 링크 생성하기
@@ -261,3 +261,36 @@ Route::get('/makesign', function() {
 Route::get('/sign', function () {
     return "Sign";
 })->name('sign')->middleware('signed');
+
+/*
+|--------------------------------------------------------------------------
+| 컨트롤러
+|--------------------------------------------------------------------------
+| 
+| 커맨드로 컨트롤러 생성 : php artisan make:controller TestController
+| 커맨드로 컨트롤러 생성 : php artisan make:controller TaslsController --resource
+| 커맨드로 생성된 목록 확인 : php artisan route:list
+| xcopy D:\workspace\PHPFULLSTACK\Laravel\edu-laravel\app\Http\Controllers C:\Apache24\htdocs\edu-laravel\app\Http\Controllers /e /h /k /y
+|
+*/
+
+use App\Http\Controllers\TestController;
+Route::get('/test', [TestController::class, 'index'])->name('tests.index');
+
+use App\Http\Controllers\TasksController;
+Route::resource('/tasks', TasksController::class);
+
+// GET|HEAD        tasks ....................................... tasks.index › TasksController@index  
+// POST            tasks ....................................... tasks.store › TasksController@store  
+// GET|HEAD        tasks/create .............................. tasks.create › TasksController@create  
+// GET|HEAD        tasks/{task} .................................. tasks.show › TasksController@show  
+// PUT|PATCH       tasks/{task} .............................. tasks.update › TasksController@update  
+// DELETE          tasks/{task} ............................ tasks.destroy › TasksController@destroy  
+// GET|HEAD        tasks/{task}/edit ............................. tasks.edit › TasksController@edit  
+// GET|HEAD        test ......................................... tests.index › TestController@index  
+// GET|HEAD        users/login ......................................................... users.login  
+// GET|HEAD        users/logout ....................................................... users.logout  
+// GET|HEAD        users/regist ....................................................... users.regist  
+
+use App\Http\Controllers\BladeController;
+Route::get('/blade', [BladeController::class, 'index'])->name('blade.index');
