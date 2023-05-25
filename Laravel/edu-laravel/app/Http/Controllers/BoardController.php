@@ -103,7 +103,20 @@ class BoardController extends Controller
 
         // 카테고리가 활성화 되어 있는 게시글의 카테고리 별 갯수를 출력해 주세요.
         // 카테고리 번호, 카테고리 명, 글 개수
-        $result1 = DB::table('categories')->join('boards', 'categories.no', '=', 'boards.category')->select('categories.no', 'categories.name')->selectRaw('COUNT(*) AS cnt')->where('categories.active_flg', '1')->groupBy('categories.no', 'categories.name')->get();
+        $result = DB::table('categories as c')
+        ->join('boards as b', 'c.no', 'b.category')
+        ->select('c.no', 'c.name', DB::raw('count(*) as cnt'))
+        ->where('c.active_flg', '1')
+        ->groupBy('c.no', 'c.name')
+        ->get();
+
+        $result1 = DB::table('categories as c')
+        ->join('boards as b', 'c.no', 'b.category')
+        ->select('c.no', 'c.name')
+        ->selectRaw('COUNT(*) AS cnt')
+        ->where('c.active_flg', '1')
+        ->groupBy('c.no', 'c.name') // group by 절에는 select로 뽑는 컬럼 명을 모두 적어 주어야 함
+        ->get();
 
         var_dump($result1);
     }
