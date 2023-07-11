@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+}
+
+.nav {
+	background-color: #2c3e50;
+	padding: 15px;
+}
+.nav a {
+	color: white;
+	padding: 10px;
+}
+div {
+	box-sizing: border-box;
+}
+.bg_black {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.bg_white {
+	width: 80%;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+/* .startTransition {
+	opacity: 0;
+	transition: all 1s;
+}
+
+.endTransition {
+	opacity: 1;
+} */
+
+/* 등장 애니메이션 */
+.modalTransition-enter-from {
+	opacity: 0;
+}
+
+.modalTransition-enter-active {
+	transition: all 0.5s;
+}
+
+.modalTransition-enter-to {
+	opacity: 1;
+}
+
+/* 퇴장 애니메이션 */
+.modalTransition-leave-from {
+	opacity: 1;
+}
+
+.modalTransition-leave-active {
+	transition: all 0.5s;
+}
+
+.modalTransition-leave-to {
+	opacity: 0;
+}
+
+.discount {
+	background: rgb(233, 65, 65);
+	font-size: 1.2rem;
+	color: white;
+	padding: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
