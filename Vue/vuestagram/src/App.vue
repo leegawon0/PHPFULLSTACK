@@ -26,7 +26,6 @@
 <script>
 import ContainerComponent from './components/ContainerComponent.vue'
 
-
 export default {
   name: 'App',
   created() {
