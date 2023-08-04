@@ -25,9 +25,10 @@ class JWT {
         Log::debug("header : ". $header);
         // payload 작성
         $iat = time();
-        $exp = $iat + 60;
+        $exp = $iat + 3600;
         $payload_json = json_encode([
             'id' => $data['id'],
+            'pw' => $data['pw'],
             'iat' => $iat,
             'exp' => $exp
         ]);
@@ -38,6 +39,7 @@ class JWT {
         $signature = hash($this->alg, $header.$payload.$this->secret_key);
         Log::debug("signature : ". $signature);
         
+        Log::debug("token : ".$header.".".$payload.".".$signature);
         Log::debug("------- createJWT End -------");
         return $header.".".$payload.".".$signature;
     }

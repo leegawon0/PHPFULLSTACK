@@ -20,13 +20,13 @@ class AuthController extends Controller
     */
     function issueToken(Request $req) {
         Log::debug("------- issueJWT Start -------");
-        Log::debug("id", $req->only('id'));
+        Log::debug("id", $req->only('id', 'pw'));
         //유효성 체크
 
         // DB에서 유저 검색
 
         // JWT 생성
-        $token = $this->obj_jwt->createJWT($req->only('id'));
+        $token = $this->obj_jwt->createJWT($req->only('id', 'pw'));
         Log::debug("------- issueJWT End -------");
 
         $res = [
@@ -56,6 +56,28 @@ class AuthController extends Controller
             $status = 401;
         };
 
+        return response(json_encode($res), 200);
+    }
+
+    /*
+    로그인
+    */
+    public function login(Request $req) {
+        Log::debug("------- Login Start -------");
+        Log::debug("id", $req->only('id', 'pw'));
+        //유효성 체크
+
+        // DB에서 유저 검색
+
+        // JWT 생성
+        $token = $this->obj_jwt->createJWT($req->only('id', 'pw'));
+        Log::debug("------- issueJWT End -------");
+
+        $res = [
+            'errflg' => '0',
+            'token' => $token
+        ];
+        Log::debug("------- Login End -------");
         return response(json_encode($res), 200);
     }
 }
